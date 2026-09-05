@@ -380,13 +380,6 @@ Regulatory compliance requires explainable, auditable rules. Mapping continuous 
 
 ---
 
-## 22. Razorpay AI Builder Context
-
-> *Built for the **Razorpay AI Builder Internship 2026 — AI Risk Manager Track**.*  
-> *This project is a technical prototype demonstrating an explainable, ML-first transaction risk manager. It does not use proprietary Razorpay data, nor does it claim endorsement by or production affiliation with Razorpay.*
-
----
-
 ## Additional Documentation
 - [`docs/technical-panel.md`](docs/technical-panel.md): Comprehensive technical answers to 32 review questions.
 - [`docs/development-challenges.md`](docs/development-challenges.md): Detailed engineering post-mortems of real implementation challenges.

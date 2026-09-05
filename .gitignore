@@ -32,9 +32,10 @@ data/raw/*.gz
 data/processed/*.csv
 data/processed/*.parquet
 
-# Model artifacts (large binary files)
-# models/*.joblib
-# models/*.pkl
+# Model artifacts — large binary files; commit model_meta.json only
+models/*.joblib
+models/*.pkl
+models/*.bin
 
 # Jupyter
 .ipynb_checkpoints/
@@ -43,6 +44,7 @@ notebooks/.ipynb_checkpoints/
 # Environment variables
 .env
 *.env
+.env.local
 
 # IDE
 .vscode/
@@ -52,11 +54,13 @@ notebooks/.ipynb_checkpoints/
 # OS
 .DS_Store
 Thumbs.db
+desktop.ini
 
-# Node
-frontend/node_modules/
-frontend/dist/
-frontend/.env
+# Node (frontend)
+frontend/riskguard-frontend/node_modules/
+frontend/riskguard-frontend/dist/
+frontend/riskguard-frontend/.env
+node_modules/
 
 # Logs
 *.log

@@ -244,8 +244,8 @@ def model_info():
 
 DEMO_TRANSACTIONS = [
     {
-        "label": "Normal Routine Payment",
-        "description": "Routine merchant payment with sufficient balance and negligible risk",
+        "label": "Normal Routine Payment — LOW RISK",
+        "description": "Routine merchant payment with sufficient balance. Model-verified ALLOW (Risk Score ~1/100).",
         "transaction": {
             "step": 1,
             "type": "PAYMENT",
@@ -259,23 +259,23 @@ DEMO_TRANSACTIONS = [
         },
     },
     {
-        "label": "Suspicious Large Transfer",
-        "description": "High-value transfer with partial balance drain requiring analyst review",
+        "label": "Large Partial Transfer — MEDIUM RISK",
+        "description": "50% balance drain to non-merchant over a single step. Model-verified REVIEW band (~44/100).",
         "transaction": {
             "step": 200,
             "type": "TRANSFER",
-            "amount": 50000.0,
-            "oldbalanceOrg": 75000.0,
-            "newbalanceOrig": 25000.0,
+            "amount": 2500000.0,
+            "oldbalanceOrg": 5000000.0,
+            "newbalanceOrig": 2500000.0,
             "oldbalanceDest": 0.0,
-            "newbalanceDest": 50000.0,
+            "newbalanceDest": 2500000.0,
             "nameOrig": "C5432167890",
             "nameDest": "C9876543210",
         },
     },
     {
-        "label": "High-Risk Account Drain (Full Balance)",
-        "description": "100% balance drain matching the characteristic PaySim fraud attack vector",
+        "label": "Full Balance Drain — HIGH RISK",
+        "description": "100% account balance drained via TRANSFER to a zero-balance destination. Model-verified BLOCK (~99/100).",
         "transaction": {
             "step": 397,
             "type": "TRANSFER",

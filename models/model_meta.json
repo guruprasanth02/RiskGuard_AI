@@ -1,0 +1,120 @@
+{
+  "model_name": "RandomForest",
+  "threshold": 0.7863734992377551,
+  "feature_cols": [
+    "amount",
+    "log1p_amount",
+    "hour_of_day",
+    "day_of_month",
+    "type_encoded",
+    "is_cash_out",
+    "is_transfer",
+    "orig_balance_before",
+    "dest_balance_before",
+    "amount_to_orig_balance",
+    "is_full_drain_attempt",
+    "is_orig_zero_balance",
+    "is_dest_zero_balance",
+    "dest_is_merchant"
+  ],
+  "train_end_step": 500,
+  "val_end_step": 620,
+  "val_metrics": {
+    "name": "Random Forest (Validation Set)",
+    "threshold": 0.7863734992377551,
+    "precision_fraud": 1.0,
+    "recall_fraud": 0.9992223950233281,
+    "f1_fraud": 0.999611046285492,
+    "pr_auc": 1.0,
+    "roc_auc": 0.9999999999999999,
+    "confusion_matrix": [
+      [
+        208698,
+        0
+      ],
+      [
+        1,
+        1285
+      ]
+    ]
+  },
+  "test_metrics": {
+    "name": "RandomForest (Held-out Test Set)",
+    "threshold": 0.7863734992377551,
+    "precision_fraud": 1.0,
+    "recall_fraud": 0.9985358711566618,
+    "f1_fraud": 0.9992673992673993,
+    "pr_auc": 0.9999952083056036,
+    "roc_auc": 0.9999999263541375,
+    "confusion_matrix": [
+      [
+        89463,
+        0
+      ],
+      [
+        2,
+        1364
+      ]
+    ]
+  },
+  "all_val_metrics": {
+    "LogisticRegression": {
+      "name": "Logistic Regression (Validation Set)",
+      "threshold": 0.19851725276389076,
+      "precision_fraud": 0.9992217898832685,
+      "recall_fraud": 0.9984447900466563,
+      "f1_fraud": 0.9988331388564761,
+      "pr_auc": 0.9992229540872086,
+      "roc_auc": 0.9995630354692465,
+      "confusion_matrix": [
+        [
+          208697,
+          1
+        ],
+        [
+          2,
+          1284
+        ]
+      ]
+    },
+    "RandomForest": {
+      "name": "Random Forest (Validation Set)",
+      "threshold": 0.7863734992377551,
+      "precision_fraud": 1.0,
+      "recall_fraud": 0.9992223950233281,
+      "f1_fraud": 0.999611046285492,
+      "pr_auc": 1.0,
+      "roc_auc": 0.9999999999999999,
+      "confusion_matrix": [
+        [
+          208698,
+          0
+        ],
+        [
+          1,
+          1285
+        ]
+      ]
+    },
+    "XGBoost": {
+      "name": "XGBoost (Validation Set)",
+      "threshold": 0.5740852952003479,
+      "precision_fraud": 1.0,
+      "recall_fraud": 1.0,
+      "f1_fraud": 1.0,
+      "pr_auc": 1.0,
+      "roc_auc": 1.0,
+      "confusion_matrix": [
+        [
+          208698,
+          0
+        ],
+        [
+          0,
+          1286
+        ]
+      ]
+    }
+  },
+  "training_duration_seconds": 64.48
+}
